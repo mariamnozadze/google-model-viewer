@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>model-viewer example</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--  Fullscreen polyfill is needed to fully support AR features -->
+  <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+
+  <!--  Include prismatic.js for Magic Leap support -->
+  <script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+
+  <!--  The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  <style>
+    #card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 900px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="card">
+    <model-viewer src="assets/assemblyfb.glb" shadow-intensity="1" camera-controls interaction-prompt="auto" auto-rotate
+      ar magic-leap>
+    </model-viewer>
+    <section class="attribution">
+    </section>
+
+  </div>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+</body>
+
+</html>
